@@ -211,7 +211,8 @@ public class AudioVisualizationView: BaseNibView {
 
 	public func pause() {
 		guard let chronometer = self.playChronometer, chronometer.isPlaying else {
-			fatalError("trying to pause audio visualization view when not playing")
+			print("trying to pause audio visualization view when not playing")
+			return
 		}
 		self.playChronometer?.pause()
 	}
